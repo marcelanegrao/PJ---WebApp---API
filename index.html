@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Projeto com vLibras</title>
-  <link rel="stylesheet" href="style.css"> <!--para conectar o CSS-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplicativo do Clima</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h1>🍽️ Receita Aleatória</h1>
+  <!-- Texto fora da caixa -->
+  <div class="header-text">
+    <h2>🌤️ Previsão do Tempo em Tempo Real</h2>
+    <p>Consulte dados meteorológicos atualizados para qualquer cidade do mundo.</p>
+  </div>
 
-<button id="buscar">Buscar Receita</button> <!--botão para a busca-->
+  <div class="container">
+    <h1>Consulte o Clima:</h1>
+    <form onsubmit="buscarClima(event)">
+      <input type="text" id="city-input" placeholder="Digite o nome da cidade" />
+      <input type="submit" value="Buscar" />
+    </form>
 
-<div id="resultado"></div> <!--div que vai mostrar o resultado-->
+    <div id="weather-data">
+      <div class="icon"></div>
+      <div class="temperature"></div>
+      <div class="description"></div>
+      <div class="details"></div>
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>🌎 Desenvolvido como projeto: <strong>Meu Primeiro WebApp Conectado</strong> | © 2025</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
